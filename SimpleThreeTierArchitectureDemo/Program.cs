@@ -15,16 +15,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseInMemoryDatabase("InMemoryDb"));
-builder.Services
-    .AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
-
-
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped(typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(GenericService<>));
+builder.Services.AddScoped(typeof(GenericService<,>));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

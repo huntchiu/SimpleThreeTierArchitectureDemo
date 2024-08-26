@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SimpleThreeTierArchitectureDemo.Models
+namespace SimpleThreeTierArchitectureDemo.Models.Entities
 {
-    public class Employee
+    public class Employee : BaseEntity
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
         public String Name { get; set; } = String.Empty;
     }
 }

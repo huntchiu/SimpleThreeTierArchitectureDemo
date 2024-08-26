@@ -21,5 +21,17 @@ namespace SimpleThreeTierArchitectureDemo.Repositories
             return Context.Set<TEntity>().ToList();
         }
 
+        public TEntity? GetById(Guid id)
+        {
+            return Context.Set<TEntity>().Find(id);
+        }
+
+
+        public void Create(TEntity entity)
+        {
+            Context.Set<TEntity>().Add(entity);
+            Context.SaveChanges();
+        }
+
     }
 }
