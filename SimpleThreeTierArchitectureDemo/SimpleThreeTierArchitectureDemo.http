@@ -1,0 +1,6 @@
+@SimpleThreeTierArchitectureDemo_HostAddress = http://localhost:5186
+
+GET {{SimpleThreeTierArchitectureDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
